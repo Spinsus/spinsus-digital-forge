@@ -3,7 +3,13 @@ import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
   return (
-    <section id="hero" className="min-h-screen pt-24 relative overflow-hidden">
+    <section
+      id="hero"
+      className="min-h-screen pt-24 relative bg-cover bg-center overflow-hidden"
+      style={{
+        backgroundImage: "url('/lovable-uploads/450906e5-0514-4bcc-8bde-5261667f643c.png')"
+      }}
+    >
       {/* Background Image */}
       <div className="absolute inset-0 bg-black/60 z-10" />
       <div
