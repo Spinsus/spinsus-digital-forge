@@ -1,5 +1,5 @@
 
-import { ArrowUp } from "lucide-react";
+import { ArrowUp, Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 
 const FooterSection = () => {
   const scrollToTop = () => {
@@ -8,6 +8,29 @@ const FooterSection = () => {
       behavior: 'smooth'
     });
   };
+
+  const socialLinks = [
+    { 
+      Icon: Facebook, 
+      url: "https://www.facebook.com/spinsus",
+      ariaLabel: "Spinsus Facebook" 
+    },
+    { 
+      Icon: Instagram, 
+      url: "https://www.instagram.com/spinsus_official/",
+      ariaLabel: "Spinsus Instagram" 
+    },
+    { 
+      Icon: Twitter, 
+      url: "https://x.com/spinsus",
+      ariaLabel: "Spinsus X (Twitter)" 
+    },
+    { 
+      Icon: Linkedin, 
+      url: "https://www.linkedin.com/company/76534347/admin/dashboard/",
+      ariaLabel: "Spinsus LinkedIn" 
+    }
+  ];
 
   return (
     <footer className="py-10 bg-gray-900/50 backdrop-blur-sm border-t border-gray-800">
@@ -21,6 +44,20 @@ const FooterSection = () => {
           </div>
           
           <div className="flex flex-col items-center md:items-end">
+            <div className="flex space-x-4 mb-4">
+              {socialLinks.map(({ Icon, url, ariaLabel }) => (
+                <a 
+                  key={url} 
+                  href={url} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  aria-label={ariaLabel}
+                  className="text-gray-400 hover:text-green-500 transition-colors"
+                >
+                  <Icon className="h-6 w-6" />
+                </a>
+              ))}
+            </div>
             <button 
               onClick={scrollToTop}
               className="p-3 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors mb-4"
