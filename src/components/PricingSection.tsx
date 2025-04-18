@@ -1,4 +1,4 @@
-import { Brain, Globe, Code2, ChevronDown, ChevronUp } from "lucide-react";
+import { Brain, Globe, Code2, ChevronDown, ChevronUp, Bitcoin } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -51,6 +51,43 @@ const PricingSection = () => {
           price: null,
           description: "Tailored enterprise solutions",
           features: ["Custom Everything", "24/7 Support", "Dedicated Team", "Full Maintenance"]
+        }
+      ]
+    },
+    {
+      title: "Blockchain & Web3",
+      icon: <Bitcoin className="w-8 h-8 text-green-500" />,
+      description: "Complete blockchain and Web3 development solutions",
+      plans: [
+        {
+          name: "DApp Starter",
+          price: 8000,
+          description: "Perfect for MVPs and proof of concepts",
+          features: ["Smart Contract Development", "Web3 Frontend", "Basic Testing", "1 Month Support"]
+        },
+        {
+          name: "Token Launch",
+          price: 20000,
+          description: "Launch your own token or NFT collection",
+          features: ["Token Smart Contracts", "NFT Functionality", "Security Audit", "2 Months Support"]
+        },
+        {
+          name: "DeFi Platform",
+          price: 45000,
+          description: "Build your decentralized finance platform",
+          features: ["DeFi Smart Contracts", "Full Platform Development", "Advanced Security", "3 Months Support"]
+        },
+        {
+          name: "Enterprise Blockchain",
+          price: 85000,
+          description: "Enterprise-grade blockchain solutions",
+          features: ["Private Blockchain", "Custom Protocols", "Enterprise Integration", "6 Months Support"]
+        },
+        {
+          name: "Custom Web3",
+          price: null,
+          description: "Tailored blockchain solutions",
+          features: ["Custom Architecture", "Full Development", "Comprehensive Security", "Ongoing Support"]
         }
       ]
     },
