@@ -6,10 +6,10 @@ const HeroSection = () => {
     <section id="hero" className="min-h-screen pt-24 relative overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 bg-black/60 z-10" />
-      <div 
+      <div
         className="absolute inset-0 bg-cover bg-center -z-10"
         style={{
-          backgroundImage: "url('/lovable-uploads/9ac84df5-0697-4104-9440-e460569172c0.png')"
+          backgroundImage: "url('/lovable-uploads/450906e5-0514-4bcc-8bde-5261667f643c.png')"
         }}
       />
 
@@ -20,7 +20,7 @@ const HeroSection = () => {
             <span className="block text-[#4AE288]">Digital Reality</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            With 18+ years of experience in full-stack development, AI, and 
+            With 18+ years of experience in full-stack development, AI, and
             blockchain technologies for businesses that demand excellence
           </p>
           <Button
