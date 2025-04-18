@@ -30,7 +30,7 @@ const HeroSection = () => {
             </Button>
             <Button
               variant="outline"
-              className="border-green-500 hover:bg-green-500/10 px-8 py-6 text-lg"
+              className="border-green-500 text-black hover:bg-green-500/10 px-8 py-6 text-lg"
               onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Explore Services
