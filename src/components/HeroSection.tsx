@@ -18,19 +18,19 @@ const HeroSection = () => {
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl">
-            Specialized expertise in AI and blockchain development, 
+            Specialized expertise in AI and blockchain development,
             bringing cutting-edge technology to your ambitious projects.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Button 
+            <Button
               className="bg-gradient-to-r from-green-500 to-emerald-700 text-white px-8 py-6 text-lg hover:shadow-lg hover:shadow-green-500/20 transition-all"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Innovate Together
             </Button>
-            <Button 
-              variant="outline" 
-              className="border-green-500 text-green-400 hover:bg-green-500/10 px-8 py-6 text-lg"
+            <Button
+              variant="outline"
+              className="border-green-500 text-black-400 hover:bg-green-500/10 px-8 py-6 text-lg"
               onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Explore Services
