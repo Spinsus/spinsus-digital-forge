@@ -77,7 +77,7 @@ const AboutSection = () => {
 
             <Button
               variant="outline"
-              className="border-green-500 text-black hover:bg-green-500/10"
+              className="border-green-500 text-black hover:bg-black-500/10"
               onClick={() => window.open("https://www.linkedin.com/in/kevin-l-9950605b/", "_blank")}
             >
               LinkedIn Profile

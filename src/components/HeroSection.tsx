@@ -25,16 +25,27 @@ const HeroSection = () => {
             Transforming Ideas into
             <span className="block text-[#4AE288]">Digital Reality</span>
           </h1>
-          <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            With 18+ years of experience in full-stack development, AI, and
-            blockchain technologies for businesses that demand excellence
+          <p className="text-xl text-gray-300 mb-8">
+            Specialized expertise in AI and blockchain development,
+            bringing cutting-edge technology to your ambitious projects.
           </p>
-          <Button
-            className="bg-[#4AE288] text-black hover:bg-[#4AE288]/90 px-8 py-6 text-lg"
-            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-          >
-            GET IN TOUCH
-          </Button>
+          <span style={{padding: "20px"}}>
+            <Button
+              className="bg-gradient-to-r from-green-500 to-emerald-700 text-white px-8 py-6 text-lg hover:shadow-lg hover:shadow-green-500/20 transition-all"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              Innovate Together
+            </Button>
+          </span>
+          <span>
+            <Button
+              variant="outline"
+              className="border-green-500 text-black hover:bg-black-500/10 px-8 py-6 text-lg"
+              onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              Explore Services
+            </Button>
+          </span>
         </div>
       </div>
     </section>
