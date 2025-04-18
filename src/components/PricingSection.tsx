@@ -1,10 +1,21 @@
-
-import { Brain, Globe, Code2 } from "lucide-react";
+import { Brain, Globe, Code2, ChevronDown, ChevronUp } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import { useState } from "react";
 
 const PricingSection = () => {
+  const [openCategories, setOpenCategories] = useState<string[]>(["AI Solutions"]);
+
+  const toggleCategory = (category: string) => {
+    setOpenCategories(prev =>
+      prev.includes(category)
+        ? prev.filter(c => c !== category)
+        : [...prev, category]
+    );
+  };
+
   const categories = [
     {
       title: "AI Solutions",
@@ -113,47 +124,61 @@ const PricingSection = () => {
           </p>
         </div>
 
-        <div className="space-y-16">
+        <div className="space-y-8">
           {categories.map((category, index) => (
-            <div key={index} className="space-y-8">
-              <div className="flex items-center gap-3 mb-8">
-                {category.icon}
-                <div>
-                  <h3 className="text-2xl font-semibold text-white">{category.title}</h3>
-                  <p className="text-gray-400">{category.description}</p>
+            <Collapsible
+              key={index}
+              open={openCategories.includes(category.title)}
+              onOpenChange={() => toggleCategory(category.title)}
+              className="border border-gray-800 rounded-lg p-6 hover:border-green-500/30 transition-colors"
+            >
+              <CollapsibleTrigger className="flex items-center justify-between w-full">
+                <div className="flex items-center gap-3">
+                  {category.icon}
+                  <div className="text-left">
+                    <h3 className="text-2xl font-semibold text-white">{category.title}</h3>
+                    <p className="text-gray-400">{category.description}</p>
+                  </div>
                 </div>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
-                {category.plans.map((plan, planIndex) => (
-                  <Card key={planIndex} className="bg-gray-900/50 border-gray-800 backdrop-blur-sm hover:border-green-500/50 transition-all">
-                    <CardHeader>
-                      <CardTitle className="text-xl text-white">{plan.name}</CardTitle>
-                      <CardDescription className="text-gray-400">
-                        {plan.description}
-                      </CardDescription>
-                    </CardHeader>
-                    <CardContent className="space-y-4">
-                      <div className="text-2xl font-bold text-white">
-                        {plan.price ? `$${plan.price.toLocaleString()}` : 'Custom Quote'}
-                      </div>
-                      <ul className="space-y-2">
-                        {plan.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="text-gray-400 flex items-center gap-2">
-                            <Badge variant="secondary" className="bg-green-500/10 text-green-500 hover:bg-green-500/20">
-                              {feature}
-                            </Badge>
-                          </li>
-                        ))}
-                      </ul>
-                      <Button className="w-full bg-green-500 hover:bg-green-600 text-white">
-                        Get Started
-                      </Button>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </div>
+                {openCategories.includes(category.title) ? (
+                  <ChevronUp className="w-6 h-6 text-green-500" />
+                ) : (
+                  <ChevronDown className="w-6 h-6 text-green-500" />
+                )}
+              </CollapsibleTrigger>
+              
+              <CollapsibleContent className="mt-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+                  {category.plans.map((plan, planIndex) => (
+                    <Card key={planIndex} className="bg-gray-900/50 border-gray-800 backdrop-blur-sm hover:border-green-500/50 transition-all">
+                      <CardHeader>
+                        <CardTitle className="text-xl text-white">{plan.name}</CardTitle>
+                        <CardDescription className="text-gray-400">
+                          {plan.description}
+                        </CardDescription>
+                      </CardHeader>
+                      <CardContent className="space-y-4">
+                        <div className="text-2xl font-bold text-white">
+                          {plan.price ? `$${plan.price.toLocaleString()}` : 'Custom Quote'}
+                        </div>
+                        <ul className="space-y-2">
+                          {plan.features.map((feature, featureIndex) => (
+                            <li key={featureIndex} className="text-gray-400 flex items-center gap-2">
+                              <Badge variant="secondary" className="bg-green-500/10 text-green-500 hover:bg-green-500/20">
+                                {feature}
+                              </Badge>
+                            </li>
+                          ))}
+                        </ul>
+                        <Button className="w-full bg-green-500 hover:bg-green-600 text-white">
+                          Get Started
+                        </Button>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </CollapsibleContent>
+            </Collapsible>
           ))}
         </div>
 
