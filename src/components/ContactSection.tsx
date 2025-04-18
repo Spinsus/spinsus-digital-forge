@@ -21,13 +21,13 @@ const ContactSection = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
-    
+
     // Simulate form submission
     toast({
       title: "Message Sent",
       description: "Thanks for reaching out! I'll get back to you shortly.",
     });
-    
+
     setFormData({
       name: "",
       email: "",
@@ -52,7 +52,7 @@ const ContactSection = () => {
             <div className="md:w-2/5">
               <div className="bg-gray-900/50 backdrop-blur-sm p-8 rounded-lg border border-gray-800 h-full">
                 <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
-                
+
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
                     <div className="bg-green-500/20 p-3 rounded-full">
@@ -60,10 +60,10 @@ const ContactSection = () => {
                     </div>
                     <div>
                       <h4 className="text-lg font-semibold text-white">Email</h4>
-                      <p className="text-gray-400">contact@spinsus.com</p>
+                      <p className="text-gray-400">kevin@spinsus.com</p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start gap-4">
                     <div className="bg-green-500/20 p-3 rounded-full">
                       <MessageCircle className="w-6 h-6 text-green-500" />
@@ -71,18 +71,18 @@ const ContactSection = () => {
                     <div>
                       <h4 className="text-lg font-semibold text-white">Social</h4>
                       <div className="flex gap-2 mt-2">
-                        <a 
-                          href="https://www.linkedin.com/in/kevin-l-9950605b/" 
-                          target="_blank" 
+                        <a
+                          href="https://www.linkedin.com/in/kevin-l-9950605b/"
+                          target="_blank"
                           rel="noopener noreferrer"
                           className="text-gray-400 hover:text-green-500 transition-colors"
                         >
                           LinkedIn
                         </a>
                         <span className="text-gray-600">•</span>
-                        <a 
-                          href="https://www.upwork.com/freelancers/~01cb4f0156348f7118" 
-                          target="_blank" 
+                        <a
+                          href="https://www.upwork.com/freelancers/~01cb4f0156348f7118"
+                          target="_blank"
                           rel="noopener noreferrer"
                           className="text-gray-400 hover:text-green-500 transition-colors"
                         >
@@ -94,7 +94,7 @@ const ContactSection = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="md:w-3/5">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
@@ -108,7 +108,7 @@ const ContactSection = () => {
                     className="bg-gray-900/50 border-gray-800 placeholder:text-gray-500 h-12"
                   />
                 </div>
-                
+
                 <div>
                   <Input
                     type="email"
@@ -120,7 +120,7 @@ const ContactSection = () => {
                     className="bg-gray-900/50 border-gray-800 placeholder:text-gray-500 h-12"
                   />
                 </div>
-                
+
                 <div>
                   <Textarea
                     name="message"
@@ -131,9 +131,9 @@ const ContactSection = () => {
                     className="bg-gray-900/50 border-gray-800 placeholder:text-gray-500 min-h-[150px]"
                   />
                 </div>
-                
-                <Button 
-                  type="submit" 
+
+                <Button
+                  type="submit"
                   className="w-full bg-gradient-to-r from-green-500 to-emerald-700 text-white py-6 text-lg hover:shadow-lg hover:shadow-green-500/20 transition-all"
                 >
                   <Send className="mr-2 h-5 w-5" /> Send Message
