@@ -27,7 +27,7 @@ const FooterSection = () => {
     },
     {
       Icon: Linkedin,
-      url: "https://www.linkedin.com/company/76534347/admin/dashboard/",
+      url: "https://www.linkedin.com/company/spinsus-official",
       ariaLabel: "Spinsus LinkedIn"
     }
   ];
