@@ -10,25 +10,25 @@ const FooterSection = () => {
   };
 
   const socialLinks = [
-    { 
-      Icon: Facebook, 
-      url: "https://www.facebook.com/spinsus",
-      ariaLabel: "Spinsus Facebook" 
+    {
+      Icon: Facebook,
+      url: "https://www.facebook.com/spinsus.official",
+      ariaLabel: "Spinsus Facebook"
     },
-    { 
-      Icon: Instagram, 
+    {
+      Icon: Instagram,
       url: "https://www.instagram.com/spinsus_official/",
-      ariaLabel: "Spinsus Instagram" 
+      ariaLabel: "Spinsus Instagram"
     },
-    { 
-      Icon: Twitter, 
+    {
+      Icon: Twitter,
       url: "https://x.com/spinsus",
-      ariaLabel: "Spinsus X (Twitter)" 
+      ariaLabel: "Spinsus X (Twitter)"
     },
-    { 
-      Icon: Linkedin, 
+    {
+      Icon: Linkedin,
       url: "https://www.linkedin.com/company/76534347/admin/dashboard/",
-      ariaLabel: "Spinsus LinkedIn" 
+      ariaLabel: "Spinsus LinkedIn"
     }
   ];
 
@@ -42,14 +42,14 @@ const FooterSection = () => {
             </div>
             <p className="text-gray-400 mt-2">Transforming Ideas into Intelligent Solutions</p>
           </div>
-          
+
           <div className="flex flex-col items-center md:items-end">
             <div className="flex space-x-4 mb-4">
               {socialLinks.map(({ Icon, url, ariaLabel }) => (
-                <a 
-                  key={url} 
-                  href={url} 
-                  target="_blank" 
+                <a
+                  key={url}
+                  href={url}
+                  target="_blank"
                   rel="noopener noreferrer"
                   aria-label={ariaLabel}
                   className="text-gray-400 hover:text-green-500 transition-colors"
@@ -58,7 +58,7 @@ const FooterSection = () => {
                 </a>
               ))}
             </div>
-            <button 
+            <button
               onClick={scrollToTop}
               className="p-3 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors mb-4"
             >
